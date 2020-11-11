@@ -15,7 +15,7 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = AUTO, generator = "USER_SEQ")
-    private String id;
+    private Long id;
 
     private String firstname;
 
@@ -26,7 +26,7 @@ public class UserEntity {
      *
      * @return Returns the id.
      */
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
@@ -35,7 +35,7 @@ public class UserEntity {
      *
      * @param pId The id to set.
      */
-    public void setId(String pId) {
+    public void setId(Long pId) {
         id = pId;
     }
 

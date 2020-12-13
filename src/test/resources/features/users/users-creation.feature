@@ -9,4 +9,4 @@ Scenario: Create the first user
 	Then we have this response
 	| id | firstname | lastname |
 	| 1 | Jon | Snow |
-    And we have only 1 user in DB
+   # And we have only 1 user in DB

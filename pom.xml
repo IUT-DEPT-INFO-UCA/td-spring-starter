@@ -14,9 +14,10 @@
 	<name>s3a-td-spring</name>
 	<description>TD prise en main de Spring, Spring Data, Spring Rest et Spring boot</description>
 
-	<properties>
+ <!--  <properties>
 		<java.version>14</java.version>
-	</properties>
+	</properties> -->	
+	
 
 	<dependencies>
 		<dependency>
@@ -64,6 +65,34 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		<!-- Cucumber integration -->
+		
+		<!-- Cucumber JVM  (latest version: https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm)-->
+		<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-java</artifactId>
+		    <version>6.8.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- JUnit and Cucumber testing dependency -->
+		<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-junit</artifactId>
+		    <version>6.8.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- Spring and Cucumber dependency  -->
+		<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-spring</artifactId>
+		    <version>6.8.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- End cucumber -->
 	</dependencies>
 
 	<build>

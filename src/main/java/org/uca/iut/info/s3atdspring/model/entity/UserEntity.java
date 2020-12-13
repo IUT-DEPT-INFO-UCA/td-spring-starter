@@ -2,9 +2,14 @@ package org.uca.iut.info.s3atdspring.model.entity;
 
 import static javax.persistence.GenerationType.AUTO;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -20,6 +25,10 @@ public class UserEntity {
     private String firstname;
 
     private String lastname;
+
+
+    @OneToMany(mappedBy = "user", cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
+    private List<EnrolmentEntity> enrolments;
 
     /**
      * Get the id.
@@ -74,4 +83,26 @@ public class UserEntity {
     public void setLastname(String pLastname) {
         lastname = pLastname;
     }
+
+    /**
+     * Get the enrolments.
+     *
+     * @return Returns the enrolments.
+     */
+    /*
+     * public List<EnrolmentEntity> getEnrolments() {
+     * return enrolments;
+     * }
+     */
+
+    /**
+     * Set the enrolments.
+     *
+     * @param pEnrolments The enrolments to set.
+     */
+    /*
+     * public void setEnrolments(List<EnrolmentEntity> pEnrolments) {
+     * enrolments = pEnrolments;
+     * }
+     */
 }
